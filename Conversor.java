@@ -14,9 +14,9 @@ public class Conversor {
         texto = texto.toUpperCase();
         String cript = "";
         for(int i = 0; i < texto.length(); i++){
-            String value1 = valores.get(texto.charAt(i)); // pela o valor do character do texto
+            String value1 = valores.get(texto.charAt(i)); // pega o valor do character do texto
             String value2 = valores.get(chave.charAt(i % chave.length())); 
-            cript += getKeyFromValue(XOR(value1, value2));
+            cript += getKeyFromValue(XOR(value1, value2)); // faz um xor dos dois valores binarios e pega a chave que tem o resultado como o valor
         }
         return cript;
     }
